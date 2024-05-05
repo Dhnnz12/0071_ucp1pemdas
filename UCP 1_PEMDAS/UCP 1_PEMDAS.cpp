@@ -117,7 +117,6 @@
 
 
 #include <iostream>
-#include <vector>
 #include <string>
 using namespace std;
 
@@ -131,7 +130,6 @@ struct CalonMahasiswa {
 };
 
 int main() {
-    vector<CalonMahasiswa> calonMahasiswa;
     int jumlahCalonMahasiswa = 3;
 
     for (int i = 0; i < jumlahCalonMahasiswa; i++) {
@@ -142,12 +140,12 @@ int main() {
         cin >> calon.matematika;
         cout << "Masukkan nilai bahasa Inggris: ";
         cin >> calon.bahasaInggris;
-        calonMahasiswa.push_back(calon);
+        CalonMahasiswa push_back(calon);
     }
 
     cout << "\nNama\tStatus\n";
 
-    for (CalonMahasiswa calon : calonMahasiswa) {
+    for (CalonMahasiswa calon : CalonMahasiswa ) {
         string status = calon.rataRata() >= 70 || calon.matematika > 80 ? "Diterima" : "Ditolak";
         cout << calon.nama << "\t" << status << "\n";
     }
